@@ -7,7 +7,7 @@ const content = {
         content:  [
             {
                 shape:'circle',
-                color:'#e301e3',
+                color:'#ff61ff',
                 heading: '50% off for North Shore locals',
                 info : `
                     If your company is based on the North Shore then your total expenditure will be reduced by 50%!

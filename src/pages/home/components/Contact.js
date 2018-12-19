@@ -29,7 +29,8 @@ class Contact extends Component {
         },
 
         sent:false,
-        error:false
+        error:false,
+        submitting : false
     }
 
 
@@ -49,19 +50,79 @@ class Contact extends Component {
             return;
         };
         
-
-        
-        
+        this.setState({submitting:true});
         //try submit
+        const data = {
+            name : form.username.text,
+            company : form.company.text,
+            phone : form.phone.text,
+            email : form.email.text,
+            extra : form.extra.text
+        }
+        const config = {
+            method : 'POST',
+            headers : {
+                'Accept': 'application/json',
+			    'Content-Type': 'application/json'
+            },
+            body : JSON.stringify(data)
+        }
 
-        //on error
+        const url = 'http://gpitot.pythonanywhere.com/freelancing'
 
-        //on success
-
+        
+        fetch(url, config)
+            .then((resp) => {
+                return resp.json();
+            })
+            .then((data) => {
+                if (data.success) {
+                    this.setState({sent:true, error:false});
+                } else {
+                    this.setState({sent:true, error:true});
+                }
+            })
+            .catch((err) => {
+                this.setState({sent:true, error:true});
+            });
+       
+        
     }
 
     render() {
         let form = this.state.form;
+
+        if (this.state.submitting) {
+            
+            if (this.state.sent) {
+                return (
+                    <Area id="contact">
+                        <h1>Contact us</h1>
+                        <Form>
+                            {
+                                this.state.error ?
+                                <Submit>An unknown error occurred</Submit>  
+                                :
+                                <Submit>Form submitted</Submit>
+                            }
+                            
+                        </Form>
+                    </Area>
+                );
+            }
+
+
+            return (
+                <Area id="contact">
+                    <h1>Contact us</h1>
+                    <Form>
+                        <Submit>Submitting</Submit>  
+                        
+                    </Form>
+                </Area>
+            );
+            
+        }
         return (
             <Area id="contact">
                 <h1>Contact us</h1>
@@ -113,9 +174,7 @@ const Area = styled.div`
     max-width:100%;
     margin:auto;
 
-    h1 {
-        margin:50px 0 0;
-    }
+    
 
     @media (max-width:640px) {
         h1 {
@@ -173,15 +232,24 @@ const TextBox = styled.textarea`
     font-family:inherit;
 `;
 
-const Submit = styled.div`
+const Submit = styled.h1`
     width: 200px;
-    padding: 15px;
-    background: #a9bbff;
+    padding: 8px;
+    background: white;
     border: solid 1px black;
     margin: 15px;
     font-size: 22px;
-    color: #353535;
+    
     cursor: pointer;
+    text-align:center;
+
+    transition: background 0.5s ease;
+
+    &:hover {
+        text-decoration:none;
+        background:#222;
+        color:white;
+    }
 `;
 
 export default Contact;

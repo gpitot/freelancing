@@ -9,14 +9,38 @@ import Loading from './components/Loading';
 
 import {Content} from './components/AboutContent';
 
+import BeachVertical from '../../images/beach_vertical.jpeg';
 import Beach from '../../images/beach3.jpeg';
+import Beach2 from '../../images/beach4.jpeg';
+import Sand from '../../images/sand.jpeg';
+import DunesVertical from '../../images/dunes_v.jpeg';
+import SandVertical from '../../images/sand_vertical.jpeg';
+
 import Discount from '../../images/discount.png';
 
 
 class Home extends Component {
-    state = {
-        loaded:false
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            loaded:false
+        }
+    
+        this.bannerContent = {
+            heading : 'Sunshine Dev Studios',
+            body : `At Sunshine we pride ourselves on
+                <ul>
+                <li>leaving our customers satisfied</li>
+                <li>helping local businesses</li>
+                <li>building custom solutions to fit the individual problem</li>
+                </ul>
+                `
+        }
     }
+    
+
     bannerLoaded = () => {
         this.setState({loaded:true});
     }
@@ -29,23 +53,24 @@ class Home extends Component {
                 <Banner 
                     maxHeight="none"
                     wideBanner={Beach}
-                    thinBanner="https://i.redd.it/jh0gfb3ktvkz.jpg"
+                    thinBanner={BeachVertical}
                     loaded={this.bannerLoaded}
 
                     discount = {Discount}
+                    content = {this.bannerContent}
                 />
                 <About {...Content('services')} />
                 <Banner 
-                    maxHeight="600px"
-                    wideBanner="https://i.redd.it/g5g7mtzvmht01.jpg"
-                    thinBanner="https://i.redd.it/mfqm1x49akgy.jpg"
+                    maxHeight="300px"
+                    wideBanner={Beach2}
+                    thinBanner={DunesVertical}
                     loaded={null}
                 />
                 <About {...Content('aboutus')} />
                 <Banner 
                     maxHeight="300px"
-                    wideBanner="https://i.redd.it/g5g7mtzvmht01.jpg"
-                    thinBanner="https://i.redd.it/mfqm1x49akgy.jpg"
+                    wideBanner={Sand}
+                    thinBanner={SandVertical}
                     loaded={null}
                 />
                 <About {...Content('deals')} />

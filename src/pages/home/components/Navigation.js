@@ -1,7 +1,7 @@
 import React , {Component} from 'react';
 import styled from 'styled-components';
 
-import LogoPNG from '../../../images/logo.png';
+import LogoPNG from '../../../images/logo3.png';
 import Hamburger from '../../../images/hamburger.png';
 
 class Navigation extends Component {
@@ -33,20 +33,20 @@ class Navigation extends Component {
                 <Inner>
                     <Logo onClick={()=>{this.scroll('top')}}  src = {LogoPNG} />
                     
-                    <Item onClick={()=>{this.scroll('services')}}>services</Item>
-                    <Item onClick={()=>{this.scroll('about')}}>About us</Item>
-                    <Item onClick={()=>{this.scroll('deals')}}>deals</Item>
-                    <Item onClick={()=>{this.scroll('contact')}}>contact</Item>
+                    <Item className = "heading" onClick={()=>{this.scroll('services')}}>services</Item>
+                    <Item className = "heading" onClick={()=>{this.scroll('about')}}>About us</Item>
+                    <Item className = "heading" onClick={()=>{this.scroll('deals')}}>deals</Item>
+                    <Item className = "heading" onClick={()=>{this.scroll('contact')}}>contact</Item>
                 </Inner>
     
                 <MobileInner>
                     <Logo onClick={()=>{this.scroll('top')}}  src = {LogoPNG} />
                     <DropdownBtn onClick={this.toggleNav} src = {Hamburger} />
                     <DropdownArea open={this.state.navOpen}>
-                        <Item onClick={()=>{this.scroll('services')}}>services</Item>
-                        <Item onClick={()=>{this.scroll('about')}}>About us</Item>
-                        <Item onClick={()=>{this.scroll('deals')}}>deals</Item>
-                        <Item onClick={()=>{this.scroll('contact')}}>contact</Item>
+                        <Item className = "heading" onClick={()=>{this.scroll('services')}}>services</Item>
+                        <Item className = "heading" onClick={()=>{this.scroll('about')}}>About us</Item>
+                        <Item className = "heading" onClick={()=>{this.scroll('deals')}}>deals</Item>
+                        <Item className = "heading" onClick={()=>{this.scroll('contact')}}>contact</Item>
                     </DropdownArea>
                 </MobileInner>
             </Nav>
@@ -59,17 +59,20 @@ class Navigation extends Component {
 const Nav = styled.div`
     width:100%;
     position:fixed;
-    border-bottom:solid 1px black;
+    
+    box-shadow: 0px 2px 2px #414040b3;
     font-size:20px;
     text-transform:uppercase;
-    background:#eee;
+    background:white;
     z-index:3;
-    
-
-    background: rgb(114,133,236);
-    background: linear-gradient(90deg, rgba(114,133,236,1) 0%, rgba(165,197,232,1) 95%);
-
+ 
     font-weight:600;
+
+
+    @media (max-width:600px) {
+        box-shadow: none;
+        border-bottom:solid 1px #414040b3;
+    }
 `;
 
 const Inner = styled.div`
@@ -79,7 +82,7 @@ const Inner = styled.div`
     margin:auto;
 
     align-items:center;
-    @media (max-width:600px) {
+    @media (max-width:650px) {
         display:none;
     }
 `;
@@ -87,10 +90,11 @@ const Inner = styled.div`
 const Logo = styled.img`
     height:40px;
     margin:10px auto 10px 10px;
+    cursor:pointer;
 `;
 
 const Item = styled.div`
-    padding:10px;
+    padding:5px;
     margin:10px;
     cursor:pointer;
     transition:background 0.5s ease;
@@ -101,7 +105,8 @@ const Item = styled.div`
 
         &:hover {
             text-decoration:none;
-            background:#c0f3fc;
+            background:#222;
+            color:white;
         }
     }
 
@@ -117,7 +122,7 @@ const MobileInner = styled.div`
     display:flex;
     justify-content:space-between;
     align-items:center;
-    @media (min-width:600px) {
+    @media (min-width:650px) {
         display:none;
     }
 `;
@@ -131,14 +136,14 @@ const DropdownBtn = styled.img`
 `;
 
 const DropdownArea = styled.div`
-    max-height: ${props => props.open ? '250px' : '0'};
+    max-height: ${props => props.open ? '270px' : '0'};
     transition: max-height 0.5s ease;
-    height:400px;
+    height:420px;
     
     position:absolute;
     right:0;
     top:61px;
-    background:#a3c2e9;
+    background:#eee;
     overflow:hidden;
 
     div {

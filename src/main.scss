@@ -1,15 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 
+@import url('https://fonts.googleapis.com/css?family=Staatliches');
+@import url('https://fonts.googleapis.com/css?family=Pragati+Narrow');
+
 body {
     margin:0;
     padding:0;
     background:#eee;
     font-size:16px;
+    letter-spacing: 0.75px;
     color:#222;
     font-family: 'Quicksand', sans-serif;
+
+    h1 {
+        font-family: 'Pragati Narrow', sans-serif;
+    }
 }
 * {
     box-sizing:border-box;
+}
+
+.heading {
+    font-family: 'Pragati Narrow', sans-serif;
+    letter-spacing: 2px;
 }
 
 
