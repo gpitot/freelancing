@@ -1,7 +1,7 @@
 import React , {Component} from 'react';
 import styled from 'styled-components';
 
-import LogoPNG from '../../../images/logo3.png';
+import LogoPNG from '../../../images/logo4.png';
 import Hamburger from '../../../images/hamburger.png';
 
 class Navigation extends Component {
@@ -82,7 +82,7 @@ const Inner = styled.div`
     margin:auto;
 
     align-items:center;
-    @media (max-width:650px) {
+    @media (max-width:685px) {
         display:none;
     }
 `;
@@ -122,7 +122,7 @@ const MobileInner = styled.div`
     display:flex;
     justify-content:space-between;
     align-items:center;
-    @media (min-width:650px) {
+    @media (min-width:685px) {
         display:none;
     }
 `;

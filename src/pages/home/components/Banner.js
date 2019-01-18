@@ -120,12 +120,17 @@ const ContentArea = styled.div`
 `;
 
 const Heading = styled.h1`
-   font-size:40px;
+   font-size:80px;
+
+
+   @media (max-width:780px) {
+       font-size: 54px;
+   }
 `;
 
 const Body = styled.div`
 
-   @media (max-width:300px) {display:none;}
+   @media (max-width:350px) {display:none;}
 `;
 
 export default Banner;

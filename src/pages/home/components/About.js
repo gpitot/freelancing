@@ -15,10 +15,17 @@ class About extends Component {
 
     openMoreInfo= (info, index) => {
         this.setState({
-            info: info,
-            openInfo : true,
+            openInfo: false,
             openIndex: index
+        }, ()=> {
+            setTimeout(()=>{
+                this.setState({
+                    info: info,
+                    openInfo : true
+                });
+            }, 550);
         })
+        
     }
 
 
@@ -129,7 +136,7 @@ const MoreInfo = styled.div`
     max-height: ${props => props.open ? '400px' : '0'};
     overflow:hidden;
 
-    transition: max-height 0.5s ease;
+    transition: max-height 0.5s ease-in-out;
 
 
     @media (max-width: 600px) {

@@ -6,17 +6,19 @@ import Banner from './components/Banner';
 import About from './components/About';
 import Contact from './components/Contact';
 import Loading from './components/Loading';
-
+import Video from './components/Video';
 import {Content} from './components/AboutContent';
 
 import BeachVertical from '../../images/beach_vertical.jpeg';
-import Beach from '../../images/beach3.jpeg';
+import Beach from '../../images/beach.jpg';
 import Beach2 from '../../images/beach4.jpeg';
 import Sand from '../../images/sand.jpeg';
 import DunesVertical from '../../images/dunes_v.jpeg';
 import SandVertical from '../../images/sand_vertical.jpeg';
 
 import Discount from '../../images/discount.png';
+
+import DrawingRoom from '../../images/drawingroom.webm';
 
 
 class Home extends Component {
@@ -29,7 +31,7 @@ class Home extends Component {
         }
     
         this.bannerContent = {
-            heading : 'Sunshine Dev Studios',
+            heading : 'Sunshine Dev',
             body : `At Sunshine we pride ourselves on
                 <ul>
                 <li>leaving our customers satisfied</li>
@@ -74,6 +76,14 @@ class Home extends Component {
                     loaded={null}
                 />
                 <About {...Content('deals')} />
+
+                <Video 
+                    video = {{
+                        src : DrawingRoom,
+                        muted : true,
+                        controls: true
+                    }} />
+
                 <Contact />
             </Main>
         );
