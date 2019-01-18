@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
+import Fade from 'react-reveal/Fade';
+
 
 import Navigation from './components/Navigation';
 import Banner from './components/Banner';
@@ -19,6 +21,7 @@ import SandVertical from '../../images/sand_vertical.jpeg';
 import Discount from '../../images/discount.png';
 
 import DrawingRoom from '../../images/drawingroom.webm';
+import NotOnMyRoad from '../../images/notonmyroad.mp4';
 
 
 class Home extends Component {
@@ -77,12 +80,28 @@ class Home extends Component {
                 />
                 <About {...Content('deals')} />
 
-                <Video 
-                    video = {{
-                        src : DrawingRoom,
-                        muted : true,
-                        controls: true
-                    }} />
+                <Heading>Our Work</Heading>
+
+                <Fade>
+                <VideoArea>
+                    <Video 
+                        video = {{
+                            src : DrawingRoom,
+                            muted : true,
+                            controls: true
+                        }} 
+                    />
+
+                    <Video 
+                        video = {{
+                            src : NotOnMyRoad,
+                            muted : true,
+                            controls: true
+                        }} 
+                    />
+                </VideoArea>
+                </Fade>
+                
 
                 <Contact />
             </Main>
@@ -94,5 +113,19 @@ const Main = styled.main`
     opacity:${props => props.loaded ? '1' : '0'};
 
 `;
+
+
+const Heading = styled.h1`
+    text-align:center;
+`;
+
+const VideoArea = styled.div`
+    display:flex;
+    flex-flow:row wrap;
+
+    width:100%;
+    justify-content:space-around;
+`;
+
 
 export default Home;
