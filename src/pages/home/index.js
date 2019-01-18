@@ -83,23 +83,23 @@ class Home extends Component {
                 <Heading>Our Work</Heading>
 
                 <Fade>
-                <VideoArea>
-                    <Video 
-                        video = {{
-                            src : DrawingRoom,
-                            muted : true,
-                            controls: true
-                        }} 
-                    />
+                    <VideoArea>
+                        <Video 
+                            video = {{
+                                src : DrawingRoom,
+                                muted : true,
+                                controls: true
+                            }} 
+                        />
 
-                    <Video 
-                        video = {{
-                            src : NotOnMyRoad,
-                            muted : true,
-                            controls: true
-                        }} 
-                    />
-                </VideoArea>
+                        <Video 
+                            video = {{
+                                src : NotOnMyRoad,
+                                muted : true,
+                                controls: true
+                            }} 
+                        />
+                    </VideoArea>
                 </Fade>
                 
 
