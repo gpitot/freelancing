@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/static/media/beach4.5aec8b09.jpeg"
   },
   {
-    "revision": "53f849d2f5c26f24f6a4",
+    "revision": "38560df3207d8b4b87f8",
     "url": "/static/css/main.0035d60c.chunk.css"
   },
   {
@@ -28,20 +28,20 @@ self.__precacheManifest = [
     "url": "/static/media/beach.b83df7cc.jpg"
   },
   {
-    "revision": "53f849d2f5c26f24f6a4",
-    "url": "/static/js/main.53f849d2.chunk.js"
-  },
-  {
-    "revision": "866d12633d8da557b2fdf6c8a7eacadb",
-    "url": "/static/media/sand.866d1263.jpeg"
+    "revision": "38560df3207d8b4b87f8",
+    "url": "/static/js/main.38560df3.chunk.js"
   },
   {
     "revision": "d93122218ad8026b19724174d8e8e2b3",
     "url": "/static/media/dunes_v.d9312221.jpeg"
   },
   {
-    "revision": "482930d41c713d0c87f658a1c2c5d674",
-    "url": "/static/media/sand_vertical.482930d4.jpeg"
+    "revision": "6124f82647289a059c5059b946ccd400",
+    "url": "/static/media/beach_vertical_2.6124f826.jpeg"
+  },
+  {
+    "revision": "c18ba855c7d4d3fc0d0ec2d21efcf819",
+    "url": "/static/media/surf.c18ba855.jpeg"
   },
   {
     "revision": "51ad466db13b3f1290cd4aa5b46d541e",
@@ -56,7 +56,7 @@ self.__precacheManifest = [
     "url": "/static/media/notonmyroad.ef661b4c.mp4"
   },
   {
-    "revision": "b518a3da98afd2079122736ecb5b278b",
+    "revision": "de6c38ae3be017a505454928f1a701ef",
     "url": "/index.html"
   }
 ];
