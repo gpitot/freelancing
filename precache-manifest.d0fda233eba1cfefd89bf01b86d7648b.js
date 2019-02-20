@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/static/media/beach4.5aec8b09.jpeg"
   },
   {
-    "revision": "98bc9fe6990ca212a507",
+    "revision": "2eb19277c31fcf8013ae",
     "url": "/static/css/main.0035d60c.chunk.css"
   },
   {
@@ -28,8 +28,8 @@ self.__precacheManifest = [
     "url": "/static/media/beach.b83df7cc.jpg"
   },
   {
-    "revision": "98bc9fe6990ca212a507",
-    "url": "/static/js/main.98bc9fe6.chunk.js"
+    "revision": "2eb19277c31fcf8013ae",
+    "url": "/static/js/main.2eb19277.chunk.js"
   },
   {
     "revision": "866d12633d8da557b2fdf6c8a7eacadb",
@@ -56,7 +56,7 @@ self.__precacheManifest = [
     "url": "/static/media/notonmyroad.ef661b4c.mp4"
   },
   {
-    "revision": "524872f86a1526560684298958b435b4",
+    "revision": "42458c88fa29bdb97a3f1d285de263a4",
     "url": "/index.html"
   }
 ];
